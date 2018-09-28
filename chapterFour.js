@@ -31,3 +31,54 @@ console.log(anObject.left);
 
 console.log("left" in anObject);
 console.log("right" in anObject);
+
+let objectA = {a: 1, b: 2};
+Object.assign(objectA, {b: 3, c: 4});
+console.log(objectA);
+
+let journal = [
+    {events: ["work", "touched tree", "pizza", "running", "television"], squirrel: false},
+    {events: ["work", "ice cream", "cauliflower", "lasanga"],
+    squirrel: false},
+    {events: ["weekend", "cycling", "peantuts"],
+    squirrel: true}
+];
+
+function tableFor(event, journal) {
+    let table = [0, 0, 0, 0];
+    for(let i = 0; i < journal.length; i++){
+        let entry = journal[i], index = 0;
+        if(entry.events.includes(event)) index += 1;
+        if(entry.squirrel) index += 2;
+        table[index] += 1;
+    }
+    return table;
+}
+console.log(tableFor("pizza", JOURNAL))
+
+function journalEvents(journal){
+    let events = [];
+    for(let entry of journal) {
+        for(let event of entry.events) {
+            if(!events.includes(event)){
+                events.push(event);
+            }
+        }
+    }
+    return events;
+}
+console.log(journalEvents(JOURNAL));
+
+
+function range(start, end){
+    for(let i = start; i < end +1; i++){
+        if(i < end){
+            console.log(i)
+        }else{
+            console.log(end)
+        }
+    }
+}
+
+let arrayArray = [1, 2, 3, 4, 5];
+console.log(arrayArray.reverse());
