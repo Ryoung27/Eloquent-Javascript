@@ -14,3 +14,20 @@ sequence.push(5);
 console.log(sequence);
 console.log(sequence.pop());
 console.log(sequence);
+
+let day1 = {
+    squirrel: false,
+    events: ["work", "touched tree", "pizza", "running"]
+};
+console.log(day1.squirrel);
+console.log(day1.wolf);
+console.log(day1.wolf);
+
+let anObject = {left: 1, right: 2};
+console.log(anObject.left);
+
+delete anObject.left;
+console.log(anObject.left);
+
+console.log("left" in anObject);
+console.log("right" in anObject);
