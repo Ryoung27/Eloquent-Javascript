@@ -16,3 +16,21 @@ function makeRabbit(type) {
     rabbit.type = type;
     return rabbit;
 }
+
+class Rabbit {
+    constructor(type) {
+        this.type = type;
+    }
+    speak(line) {
+        console.log("The '${this. type}' rabbit says '${line}'")
+    }
+}
+
+
+let ages = {
+    Boris: 39,
+    Lian: 22,
+    Julia: 62
+}
+
+console.log('Julia is ${ages["Julia"]}');
